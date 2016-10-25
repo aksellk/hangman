@@ -21,6 +21,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
@@ -32,15 +33,32 @@ public class GameActivity extends AppCompatActivity {
     private ImageView hangmanImage;
     private int turns = 0;
     private int correctLetters = 0;
+    private TextView letterAE;
+    private TextView letterOE;
+    private TextView letterAA;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        letterAE = (TextView) findViewById(R.id.letterAE);
+        letterOE = (TextView) findViewById(R.id.letterOE);
+        letterAA = (TextView) findViewById(R.id.letterAA);
 
 
         Resources resources = getResources();
+        Locale locale = resources.getConfiguration().locale;
+        if(!(locale.getCountry().equals("NO"))) { // if not norwegian
+            letterAE.setVisibility(View.INVISIBLE);
+            letterOE.setVisibility(View.INVISIBLE);
+            letterAA.setVisibility(View.INVISIBLE);
+        } else {
+            letterAE.setVisibility(View.VISIBLE);
+            letterOE.setVisibility(View.VISIBLE);
+            letterAA.setVisibility(View.VISIBLE);
+        }
 
         // create the image:
         picture_ids = resources.obtainTypedArray(R.array.pictures);

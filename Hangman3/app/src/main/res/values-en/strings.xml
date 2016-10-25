@@ -35,4 +35,16 @@
         <item>snake</item>
         <item>penguin</item>
     </string-array>
+
+    <string name="help_text">
+        The game: \n
+        The goal of the game is to guess a word. \n
+        The player choses a letter by clicking the letters on the bottom of the screen. \n
+        If the guessed letter is a part of the solution it will replace on of the lines in the solution on the top of the screen.\n
+        If a wrong letter is guessed, the stick-man drawing gets updated and you get one less try. \n
+        You win if all correct letters are guessed before the drawing is finished. \n
+        You lose if the drawing is complete before you have guessed all correct letters. \n \n
+        Change language: \n
+        The language can be changed under the settings field.
+    </string>
 </resources>

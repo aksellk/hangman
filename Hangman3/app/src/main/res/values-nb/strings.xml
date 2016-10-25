@@ -36,4 +36,16 @@
         <item>slange</item>
         <item>pingvin</item>
     </string-array>
+
+    <string name="help_text">
+        Slik fungerer spillet: \n
+        Målet for spillet er å gjettet et ord. \n
+        Man velger en bokstav ved å trykke på bokstavene nederst på skjermen. \n
+        Hvis bokstaven er en del av løsningsordet settes den inn for en av strekene øverst på skjermen.\n
+        Hvis man gjetter feil får man et mindre forsøk og strekmannens tegning oppdateres. \n
+        Hvis man gjetter alle riktige bokstaver før tegningen er ferdig har man vunnet. \n
+        Hvis man ikke har flere forsøk igjen når tegningen er ferdig har man tapt. \n \n
+        Endre språk: \n
+        Man kan endre språk under instillinger.
+    </string>
 </resources>

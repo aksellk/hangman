@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (norwegian) {
             Locale locale = getResources().getConfiguration().locale;
-            if(!(locale.getCountry().equals("NO"))) { // if not english
+            if(!(locale.getCountry().equals("NO"))) { // if not norwegian
                 locale = new Locale("nb");
                 Configuration config = new Configuration();
                 config.locale = locale;

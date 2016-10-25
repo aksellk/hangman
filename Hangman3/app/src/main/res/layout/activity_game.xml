@@ -92,12 +92,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center_horizontal">
 
-                <TextView  android:text="U"  android:onClick="onLetterClicked"/>
-                <TextView  android:text="V"  android:onClick="onLetterClicked"/>
-                <TextView  android:text="W"  android:onClick="onLetterClicked"/>
-                <TextView  android:text="X"  android:onClick="onLetterClicked"/>
-                <TextView  android:text="Y"  android:onClick="onLetterClicked"/>
-                <TextView  android:text="Z"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="U" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="V" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="W" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="X" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="Y" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="Z" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="Æ" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:id="@+id/letterAE"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="Ø" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:id="@+id/letterOE"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="Å" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:id="@+id/letterAA"  android:onClick="onLetterClicked"/>
             </TableRow>
         </TableLayout>
 
