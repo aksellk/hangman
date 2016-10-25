@@ -18,10 +18,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:text="@string/start"
+        <TextView
+            android:text="hangman"
+            android:textSize="70dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/textView2"
+            android:layout_marginBottom="100dp" />
+
+        <Button
+            android:text="@string/start"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:onClick="startGame"
