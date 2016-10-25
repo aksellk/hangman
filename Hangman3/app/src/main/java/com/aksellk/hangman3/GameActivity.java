@@ -32,8 +32,6 @@ public class GameActivity extends AppCompatActivity {
     private ImageView hangmanImage;
     private int turns = 0;
     private int correctLetters = 0;
-    //private RelativeLayout wordLayout;
-    //private RelativeLayout.LayoutParams wordDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +51,6 @@ public class GameActivity extends AppCompatActivity {
         // create the word:
         letters = new ArrayList<Letter>();
         words = new ArrayList<String>(Arrays.asList(resources.getStringArray(R.array.words)));
-        //wordLayout = (RelativeLayout) findViewById(R.id.wordLayout);
-        //wordLayout = new RelativeLayout(this);
-        //wordDetails = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT,RelativeLayout.LayoutParams.WRAP_CONTENT);
-        //wordDetails.addRule(RelativeLayout.CENTER_HORIZONTAL);
         newWord();
     }
 
@@ -135,9 +129,7 @@ public class GameActivity extends AppCompatActivity {
 
             Log.i("newWord id ", Integer.toString(letter.getId()));
             Log.i("letter: ",letter.getLetter());
-//            tv.setText("_");
             Log.i("newWord() letter ",tv.getText().toString());
-//            wordLayout.addView(tv,wordDetails);
         }
         Log.i("correcLetters() ",Integer.toString(getCorrectLetters()));
         Log.i("letters.size() ",Integer.toString(letters.size()));

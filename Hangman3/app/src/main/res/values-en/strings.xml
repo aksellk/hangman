@@ -27,12 +27,12 @@
         <item>dog</item>
         <item>donkey</item>
         <item>gorilla</item>
-        <item>polar bear</item>
+        <item>cat</item>
         <item>lion</item>
         <item>rhino</item>
-        <item>bengal tiger</item>
-        <item>sloth</item>
-        <item>koala bear</item>
+        <item>tiger</item>
+        <item>bear</item>
+        <item>snake</item>
         <item>penguin</item>
     </string-array>
 </resources>

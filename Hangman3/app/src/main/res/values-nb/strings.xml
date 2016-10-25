@@ -28,12 +28,12 @@
         <item>hund</item>
         <item>esel</item>
         <item>gorilla</item>
-        <item>isbjørn</item>
+        <item>katt</item>
         <item>løve</item>
         <item>neshorn</item>
-        <item>bengalsk tiger</item>
-        <item>dovendyr</item>
-        <item>koalabjørn</item>
+        <item>tiger</item>
+        <item>bjørn</item>
+        <item>slange</item>
         <item>pingvin</item>
     </string-array>
 </resources>
