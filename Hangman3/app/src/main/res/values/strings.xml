@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Hangman3</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="help">Help!</string>
+
+    <integer-array name="pictures">
+        <item>@drawable/h1</item>
+        <item>@drawable/h2</item>
+        <item>@drawable/h3</item>
+        <item>@drawable/h4</item>
+        <item>@drawable/h5</item>
+        <item>@drawable/h6</item>
+        <item>@drawable/h7</item>
+        <item>@drawable/h8</item>
+        <item>@drawable/h9</item>
+        <item>@drawable/h10</item>
+    </integer-array>
+</resources>

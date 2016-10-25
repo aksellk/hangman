@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_game"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.aksellk.hangman3.GameActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_letter_line"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:id="@+id/hangmanImageView" />
+
+        <TableLayout
+            app:theme="@style/GameKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView  android:text="A" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="B" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="C" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="D" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="E" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+                <TextView  android:text="F" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:onClick="onLetterClicked"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView  android:text="G"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="H"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="I"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="J"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="K"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="L"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="M"  android:onClick="onLetterClicked"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView  android:text="N"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="O"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="P"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="Q"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="R"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="S"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="T"  android:onClick="onLetterClicked"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+
+                <TextView  android:text="U"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="V"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="W"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="X"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="Y"  android:onClick="onLetterClicked"/>
+                <TextView  android:text="Z"  android:onClick="onLetterClicked"/>
+            </TableRow>
+        </TableLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

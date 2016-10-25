@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Hangman3</string>
+    <string name="action_settings">Innstillinger</string>
+
+    <string name="help">Hjelp</string>
+    <string name="exit">Avslutt</string>
+    <string name="start">start</string>
+
+
+    <integer-array name="pictures">
+        <item>@drawable/h1</item>
+        <item>@drawable/h2</item>
+        <item>@drawable/h3</item>
+        <item>@drawable/h4</item>
+        <item>@drawable/h5</item>
+        <item>@drawable/h6</item>
+        <item>@drawable/h7</item>
+        <item>@drawable/h8</item>
+        <item>@drawable/h9</item>
+        <item>@drawable/h10</item>
+    </integer-array>
+
+    <string-array name="words">
+        <item>hund</item>
+        <item>esel</item>
+        <item>gorilla</item>
+        <item>isbjørn</item>
+        <item>løve</item>
+        <item>neshorn</item>
+        <item>bengalsk tiger</item>
+        <item>dovendyr</item>
+        <item>koalabjørn</item>
+        <item>pingvin</item>
+    </string-array>
+</resources>
