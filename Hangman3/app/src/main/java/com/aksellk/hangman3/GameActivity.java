@@ -69,25 +69,25 @@ public class GameActivity extends AppCompatActivity {
         TextView letterTextView = (TextView) view;
         String letter = letterTextView.getText().toString().trim();
         Log.i("onLetterClicked letter ",letter);
-        boolean found = false;
+        int found = 0; // counts correctly guessed letters
         int id = -1;
         for (Letter l : letters) {
             if (letter.equalsIgnoreCase(l.getLetter())) {
-                found = true;
+                found++;
                 id = l.getId();
                 Log.i("onLetterClicked id ", Integer.toString(id));
                 TextView t = l.getTextView();
                 t.setText(letter);
             }
         }
-        if (found) {
-            incrementCorrect();
-            if (!(getCorrectLetters() < letters.size())) {
+        for (int i = 0; i < found; i++) { // runs as many times as there are letters
+            incrementCorrect(); // increments the number of correctly guessed letters
+            if (!(getCorrectLetters() < letters.size())) { // game ended the player won
                 Toast.makeText(getApplicationContext(), "you won", Toast.LENGTH_LONG).show();
                 restart();
             }
         }
-        else updateImage();
+        if (found == 0) updateImage(); // no found letters
 
         letterTextView.setVisibility(View.INVISIBLE);
     }
