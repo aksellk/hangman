@@ -27,19 +27,6 @@
             android:onClick="startGame"
             android:id="@+id/startButton" />
 
-        <Button
-            android:text="norsk"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onNorwegian"
-            android:id="@+id/norwegianButton" />
-
-        <Button
-            android:text="English"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onEnglish"
-            android:id="@+id/englishButton" />
     </LinearLayout>
 
 </RelativeLayout>

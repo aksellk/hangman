@@ -2,6 +2,10 @@
     <string name="app_name">Hangman3</string>
     <string name="action_settings">Innstillinger</string>
 
+    <string name="language">språk</string>
+    <string name="english">engelsk</string>
+    <string name="norwegian">norsk</string>
+
     <string name="help">Hjelp</string>
     <string name="exit">Avslutt</string>
     <string name="start">start</string>
