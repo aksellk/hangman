@@ -32,11 +32,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="340dp"
-            android:id="@+id/hangmanImageView" />
-
         <TableLayout
             app:theme="@style/GameKeyboard"
             android:layout_width="match_parent"
@@ -103,6 +98,14 @@
                 <TextView  android:text="Å" android:layout_marginRight="8dp" android:layout_marginLeft="8dp" android:id="@+id/letterAA"  android:onClick="onLetterClicked"/>
             </TableRow>
         </TableLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:id="@+id/hangmanImageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="59dp" />
 
     </RelativeLayout>
 

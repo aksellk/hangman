@@ -50,10 +50,10 @@ public class GameActivity extends AppCompatActivity {
 
         Resources resources = getResources();
         Locale locale = resources.getConfiguration().locale;
-        if(!(locale.getCountry().equals("NO"))) { // if not norwegian
-            letterAE.setVisibility(View.INVISIBLE);
-            letterOE.setVisibility(View.INVISIBLE);
-            letterAA.setVisibility(View.INVISIBLE);
+        if(!(locale.toString().equals("nb"))) { // if not norwegian
+            letterAE.setVisibility(View.GONE);
+            letterOE.setVisibility(View.GONE);
+            letterAA.setVisibility(View.GONE);
         } else {
             letterAE.setVisibility(View.VISIBLE);
             letterOE.setVisibility(View.VISIBLE);
