@@ -66,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
         loadLocalePreferences();
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     public void startGame(View view) {
         startActivity(new Intent(getApplicationContext(),GameActivity.class));
     }

@@ -16,4 +16,10 @@ public class HelpActivity extends AppCompatActivity {
     public void onBackClicked(View view) {
         finish();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

@@ -8,8 +8,11 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -42,6 +45,8 @@ public class GameActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         letterAE = (TextView) findViewById(R.id.letterAE);
         letterOE = (TextView) findViewById(R.id.letterOE);
@@ -72,6 +77,30 @@ public class GameActivity extends AppCompatActivity {
         newWord();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem settings = (MenuItem) menu.findItem(R.id.action_settings);
+        settings.setVisible(false);
+        this.invalidateOptionsMenu();
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id==R.id.exit){
+            finish();
+            return true;
+        }
+        if (id==R.id.help) {
+            startActivity(new Intent(getApplicationContext(), HelpActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     // restart by starting the main activity:
     private void restart() {
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
@@ -95,7 +124,7 @@ public class GameActivity extends AppCompatActivity {
         for (int i = 0; i < found; i++) { // runs as many times as there are letters
             incrementCorrect(); // increments the number of correctly guessed letters
             if (!(getCorrectLetters() < letters.size())) { // game ended the player won
-                Toast.makeText(getApplicationContext(), "you won", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "correct", Toast.LENGTH_LONG).show();
                 restart();
             }
         }
@@ -104,13 +133,19 @@ public class GameActivity extends AppCompatActivity {
         letterTextView.setVisibility(View.INVISIBLE);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
     private void updateImage() {
         if (turns>0) {
             Drawable d = getResources().getDrawable(picture_ids.peekValue(turns).resourceId, null);
             hangmanImage.setImageDrawable(d);
             turns--;
         } else {
-            Toast.makeText(getApplicationContext(), "out of turns", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "game over", Toast.LENGTH_LONG).show();
             restart();
         }
 
