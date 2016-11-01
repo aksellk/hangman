@@ -6,8 +6,6 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -17,6 +15,10 @@ import android.widget.Button;
 
 import java.util.Locale;
 
+/**
+ * The main activivty class for the app.
+ * From this class the activity of the game gets called which starts a new game.
+ */
 public class MainActivity extends AppCompatActivity {
 
     private Button startButton;
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if (id==R.id.exit){
-            finish();
+            finishAffinity();
             return true;
         }
         if (id==R.id.help) {
@@ -58,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -69,13 +72,30 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        finish();
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    /**
+     * Starts the activity for the game, GameActivity
+     * @param view
+     */
     public void startGame(View view) {
         startActivity(new Intent(getApplicationContext(),GameActivity.class));
     }
 
+    /**
+     * Loads locale preferences from the SharedPreferences
+     * Sets the locale based on the checkboxes of the preference-file
+     */
     private void loadLocalePreferences() {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         boolean english = sharedPreferences.getBoolean("english",false);

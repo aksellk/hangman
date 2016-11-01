@@ -36,6 +36,10 @@
         <item>penguin</item>
     </string-array>
 
+    <string name="won">Congratulations, you guessed correctly! \n The answer was:</string>
+    <string name="lose">Game over. \n The answer was:</string>
+    <string name="toMain">main menu</string>
+
     <string name="help_text">
         The game: \n
         The goal of the game is to guess a word. \n

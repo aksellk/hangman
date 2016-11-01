@@ -4,8 +4,9 @@ import android.widget.TextView;
 
 /**
  * Created by aksel on 22.10.16.
+ *
+ * Domain class for letters.
  */
-
 public class Letter {
 
     private String letter;

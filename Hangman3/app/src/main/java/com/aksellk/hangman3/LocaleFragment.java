@@ -4,8 +4,9 @@ import android.os.Bundle;
 
 /**
  * Created by aksel on 25.10.16.
+ *
+ * Fragment that loads locale preferences from an xml-file.
  */
-
 public class LocaleFragment extends android.preference.PreferenceFragment {
 
     @Override
@@ -15,4 +16,7 @@ public class LocaleFragment extends android.preference.PreferenceFragment {
         // load preference from xml-resource:
         addPreferencesFromResource(R.xml.preferences);
     }
+
+
+
 }

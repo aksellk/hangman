@@ -37,6 +37,10 @@
         <item>pingvin</item>
     </string-array>
 
+    <string name="won">Gratulerer, du gjettet riktig. \n Svaret var:</string>
+    <string name="lose">Du tapte. \n Svaret var:</string>
+    <string name="toMain">hovedmeny</string>
+
     <string name="help_text">
         Slik fungerer spillet: \n
         Målet for spillet er å gjettet et ord. \n
